@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+
+}
+
+.loading-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #FFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+section {
+  padding: 40px;
+  text-align: center;
+  display: block;
+  text-align: center;
+
+}
+
+#hero {
+  background-image: url('hero-image.jpg');
+  background-size: cover;
+  color: white;
+}
+
+.cta-button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+#about {
+  background-color: #fff;
+}
+
+#features {
+  background-color: #f0f0f0;
+}
+
+#contact {
+  background-color: #333;
+  color: white;
+}
+
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+label,
+input {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
